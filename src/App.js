@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
 import OfertasPage from './pages/OfertasPage/OfertasPage';
+import HomePage from './pages/HomePage/HomePage';
 import AdminPage from './pages/AdminPage/AdminPage';
 
 function App() {
@@ -8,8 +9,9 @@ function App() {
     <Router>
       <Routes>
         <Route path="/admin" element={<AdminPage />} /> 
-        <Route path="/" element={<OfertasPage />} /> 
-      </Routes>
+        <Route path="/oferta" element={<OfertasPage />} /> 
+        <Route path="/" element={<HomePage />} /> 
+   </Routes>
     </Router>
   );
 }
