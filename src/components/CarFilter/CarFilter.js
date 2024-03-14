@@ -11,6 +11,7 @@ const CarFilter = ({ cars, onSelectCar }) => {
       getOptionLabel={(option) => option.label}
       onChange={(event, value) => onSelectCar(value)}
       renderInput={(params) => <TextField {...params} label="Buscar" />}
+      sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', gap: '8px', maxWidth: '100vw' }}
     />
   );
 };

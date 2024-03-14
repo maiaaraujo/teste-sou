@@ -40,12 +40,12 @@ const AdminPage = () => {
     <div>
       <h1>Administrativo</h1>
       <CarFilter cars={top100Cars} onSelectCar={handleCarSelect} />
-      <TabelaAdmin ofertas={ofertas} editarOferta={editarOferta} excluirOferta={excluirOferta} />
+      <div style={{ marginTop: '20px' }}>
+        <TabelaAdmin ofertas={ofertas} editarOferta={editarOferta} excluirOferta={excluirOferta} />
+      </div>
       <AdminForm adicionarOferta={adicionarOferta} />
     </div>
   );
 };
-
-
 
 export default AdminPage;
