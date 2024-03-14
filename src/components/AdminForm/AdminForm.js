@@ -1,4 +1,4 @@
-import { TextField, Box } from '@mui/material';
+import { TextField, Box, Button } from '@mui/material';
 import React, { useState } from 'react';
 
 const AdminForm = ({ adicionarOferta }) => {
@@ -53,8 +53,9 @@ const AdminForm = ({ adicionarOferta }) => {
           <TextField id="cidade" label="Cidade" variant="outlined" name="cidade" value={novaOferta.cidade} onChange={handleChange}/>
           <TextField id="fotos" label="Fotos" variant="outlined" name="fotos" value={novaOferta.fotos} onChange={handleChange}/>
           <TextField id="dataCadastro" label="Data de Cadastro" variant="outlined" name="dataCadastro" value={novaOferta.dataCadastro} onChange={handleChange}/>
-        </Box>
-        <button type="submit">Adicionar Oferta</button>
+         <Button variant="contained">ADICIONAR OFERTA</Button>
+         </Box>
+       
       </form>
     </div>
   );
