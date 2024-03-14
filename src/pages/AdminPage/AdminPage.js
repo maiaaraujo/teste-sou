@@ -1,21 +1,35 @@
-import * as React from 'react';
-import TextField from '@mui/material/TextField';
-import Autocomplete from '@mui/material/Autocomplete';
+import React, { useState, useEffect } from 'react';
+import TabelaAdmin from '../../components/TabelaAdmin/TabelaAdmin';
+import CarFilter from '../../components/CarFilter/CarFilter';
+import ModalForm from '../../components/ModalForm/ModalForm';
+import carrosData from '../../data/carros.json'; // Importe os dados dos carros
 
-const CarFilter = ({ cars, onSelectCar }) => {
+const AdminPage = () => {
+  const [selectedCar, setSelectedCar] = useState(null);
+  const [filteredCars, setFilteredCars] = useState([]);
+
+  useEffect(() => {
+    setFilteredCars(carrosData.carros); 
+  }, []);
+
+  const handleCarSelect = (car) => {
+    setSelectedCar(car);
+  };
+
+  const handleFilterCars = (filteredData) => {
+    setFilteredCars(filteredData);
+  };
+
   return (
-    <Autocomplete
-      disablePortal
-      id="car-filter"
-      options={cars.map(car => car.marca + ' ' + car.modelo)} 
-      onChange={(event, value) => {
-        const selectedCar = cars.find(car => car.marca + ' ' + car.modelo === value)
-        onSelectCar(selectedCar);
-      }}
-      renderInput={(params) => <TextField {...params} label="Buscar" />}
-      sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', gap: '8px', maxWidth: '100vw' }}
-    />
+    <div>
+      <h1>Administrativo</h1>
+      <CarFilter cars={carrosData.carros} onSelectCar={handleCarSelect} onFilter={handleFilterCars} />
+      <div style={{ marginTop: '20px', marginBottom: '20px' }}>
+        <TabelaAdmin carros={filteredCars} />
+      </div>
+      <ModalForm />
+    </div>
   );
 };
 
-export default CarFilter;
+export default AdminPage;

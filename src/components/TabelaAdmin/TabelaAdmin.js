@@ -39,7 +39,11 @@ const TabelaAdmin = () => {
             <StyledTableCell align="right">Ano</StyledTableCell>
             <StyledTableCell align="right">Preço</StyledTableCell>
             <StyledTableCell align="right">Cor</StyledTableCell>
-            <StyledTableCell align="right">Visualizações</StyledTableCell>
+            <StyledTableCell align="right">Km</StyledTableCell>
+            <StyledTableCell align="right">Placa</StyledTableCell>
+            <StyledTableCell align="right">Cidade</StyledTableCell>
+            <StyledTableCell align="right">Data de cadastro</StyledTableCell>
+            <StyledTableCell align="right">Ações</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -52,7 +56,11 @@ const TabelaAdmin = () => {
               <StyledTableCell align="right">{carro.ano}</StyledTableCell>
               <StyledTableCell align="right">{carro.preco}</StyledTableCell>
               <StyledTableCell align="right">{carro.cor}</StyledTableCell>
-              <StyledTableCell align="right">{carro.visualizacoes}</StyledTableCell>
+              <StyledTableCell align="right">{carro.quilometragem}</StyledTableCell>
+              <StyledTableCell align="right">{carro.placa}</StyledTableCell>
+              <StyledTableCell align="right">{carro.cidade}</StyledTableCell>
+              <StyledTableCell align="right">{carro.dataCadastro}</StyledTableCell>
+              <StyledTableCell align="right">Ações</StyledTableCell> {/* Substitua "Ações" com os botões ou links de ação desejados */}
             </StyledTableRow>
           ))}
         </TableBody>
