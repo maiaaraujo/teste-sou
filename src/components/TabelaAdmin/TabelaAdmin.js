@@ -8,6 +8,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Button from '@mui/material/Button';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -29,6 +30,16 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 
 const TabelaAdmin = () => {
+  const handleEditar = (id) => {
+    // Lógica para editar o carro com o ID fornecido
+    console.log('Editar carro com ID:', id);
+  };
+
+  const handleDeletar = (id) => {
+    // Lógica para deletar o carro com o ID fornecido
+    console.log('Deletar carro com ID:', id);
+  };
+
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
@@ -60,7 +71,10 @@ const TabelaAdmin = () => {
               <StyledTableCell align="right">{carro.placa}</StyledTableCell>
               <StyledTableCell align="right">{carro.cidade}</StyledTableCell>
               <StyledTableCell align="right">{carro.dataCadastro}</StyledTableCell>
-              <StyledTableCell align="right">Ações</StyledTableCell> {/* Substitua "Ações" com os botões ou links de ação desejados */}
+              <StyledTableCell align="right">
+                <Button variant="contained" color="primary" onClick={() => handleEditar(carro.id)}>Editar</Button>
+                <Button variant="contained" color="secondary" onClick={() => handleDeletar(carro.id)}>Deletar</Button>
+              </StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>

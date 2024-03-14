@@ -9,7 +9,8 @@ const BasicCard = ({ carro }) => {
   return (
     <Card sx={{ minWidth: 200 }}>
       <CardContent>
-      <img src={`./img/${carro.fotos[0]}`} alt={`${carro.fotos}`} style={{ width: '100%', marginBottom: 10 }} />
+        {/* Use o caminho completo para as imagens */}
+        <img src={`./img/${carro.fotos[0]}`} alt={`${carro.fotos}`} style={{ width: '100%', marginBottom: 10 }} />
 
         <Typography variant="h5" component="div">
           {carro.marca} {carro.modelo}
@@ -32,4 +33,3 @@ const BasicCard = ({ carro }) => {
 };
 
 export default BasicCard;
-
