@@ -22,7 +22,7 @@ const AdminPage = () => {
 
   return (
     <div>
-      <h1>Administrativo</h1>
+      <h1 style={{ fontFamily: 'Arial, sans-serif', color: '#264653' }}>Administrativo</h1>
       <CarFilter cars={carrosData.carros} onSelectCar={handleCarSelect} onFilter={handleFilterCars} />
       <div style={{ marginTop: '20px', marginBottom: '20px' }}>
         <TabelaAdmin carros={filteredCars} />

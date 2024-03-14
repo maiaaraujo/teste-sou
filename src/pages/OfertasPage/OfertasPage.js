@@ -5,7 +5,7 @@ import BasicCard from '../../components/BasicCard/BasicCard';
 function OfertasPage() {
   return (
     <div>
-      <h1>Ofertas</h1>
+      <h1 style={{ fontFamily: 'Arial, sans-serif', color: '#264653' }}>Ofertas</h1>
       <div>
         {carrosData.carros.map((carro) => (
           <BasicCard key={carro.id} carro={carro} />
