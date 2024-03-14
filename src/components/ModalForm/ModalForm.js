@@ -60,7 +60,7 @@ const ModalForm = ({ adicionarOferta }) => {
 
   return (
     <div>
-      <Button variant="contained" onClick={handleOpen}>Adicionar Oferta</Button>
+      <Button sx={{ backgroundColor: '#fb8500' }} variant="contained" onClick={handleOpen}>Adicionar Oferta</Button>
       <Modal
         open={open}
         onClose={handleClose}

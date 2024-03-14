@@ -12,7 +12,7 @@ import Button from '@mui/material/Button';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    backgroundColor: '#c1121f',
+    backgroundColor: '#264653',
     color: theme.palette.common.white,
   },
   [`&.${tableCellClasses.body}`]: {
@@ -73,7 +73,7 @@ const TabelaAdmin = () => {
               <StyledTableCell align="right">{carro.dataCadastro}</StyledTableCell>
               <StyledTableCell align="right">
                 <Button variant="contained" color="primary" onClick={() => handleEditar(carro.id)}>Editar</Button>
-                <Button variant="contained" color="secondary" sx={{ marginLeft: '8px' }} onClick={() => handleDeletar(carro.id)}>Deletar</Button>
+                <Button variant="contained" color="error" sx={{ marginLeft: '8px' }} onClick={() => handleDeletar(carro.id)}>Deletar</Button>
               </StyledTableCell>
             </StyledTableRow>
           ))}
