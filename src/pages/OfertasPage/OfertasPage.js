@@ -1,16 +1,16 @@
 import React from 'react';
-// import carrosData from '../../data/carros.json'; 
-// import Card from '../../components/Card';
+import carrosData from '../../data/carros.json'; 
+import BasicCard from '../../components/BasicCard/BasicCard';
 
 function OfertasPage() {
   return (
     <div>
       <h1>Ofertas</h1>
-      {/* <div>
+      <div>
         {carrosData.carros.map((carro) => (
-          <Card key={carro.id} carro={carro} />
+          <BasicCard key={carro.id} carro={carro} />
         ))}
-      </div> */}
+      </div>
     </div>
   );
 }

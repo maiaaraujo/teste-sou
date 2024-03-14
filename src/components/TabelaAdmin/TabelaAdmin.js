@@ -1,4 +1,5 @@
-import * as React from 'react';
+import React from 'react';
+import carrosData from '../../data/carros.json'; 
 import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -10,7 +11,7 @@ import Paper from '@mui/material/Paper';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    backgroundColor:'#c1121f',
+    backgroundColor: '#c1121f',
     color: theme.palette.common.white,
   },
   [`&.${tableCellClasses.body}`]: {
@@ -27,22 +28,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-function createData(
-  marca,
-  modelo,
-  ano,
-  preco,
-  cor,
-) {
-  return { marca, modelo, ano, preco, cor };
-}
-
-const rows = [
-  createData('Toyota', 'Corolla', 2020, 85000, 'Preto'),
-  createData('Honda', 'Civic', 2018, 75000, 'Branco'),
-];
-
-export default function TabelaAdmin() {
+const TabelaAdmin = () => {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
@@ -53,22 +39,26 @@ export default function TabelaAdmin() {
             <StyledTableCell align="right">Ano</StyledTableCell>
             <StyledTableCell align="right">Preço</StyledTableCell>
             <StyledTableCell align="right">Cor</StyledTableCell>
+            <StyledTableCell align="right">Visualizações</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <StyledTableRow key={row.marca}>
+          {carrosData.carros.map(carro => (
+            <StyledTableRow key={carro.id}>
               <StyledTableCell component="th" scope="row">
-                {row.marca}
+                {carro.marca}
               </StyledTableCell>
-              <StyledTableCell align="right">{row.modelo}</StyledTableCell>
-              <StyledTableCell align="right">{row.ano}</StyledTableCell>
-              <StyledTableCell align="right">{row.preco}</StyledTableCell>
-              <StyledTableCell align="right">{row.cor}</StyledTableCell>
+              <StyledTableCell align="right">{carro.modelo}</StyledTableCell>
+              <StyledTableCell align="right">{carro.ano}</StyledTableCell>
+              <StyledTableCell align="right">{carro.preco}</StyledTableCell>
+              <StyledTableCell align="right">{carro.cor}</StyledTableCell>
+              <StyledTableCell align="right">{carro.visualizacoes}</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>
       </Table>
     </TableContainer>
   );
-}
+};
+
+export default TabelaAdmin;

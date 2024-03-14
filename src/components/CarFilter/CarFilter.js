@@ -8,7 +8,7 @@ const CarFilter = ({ cars, onSelectCar }) => {
       disablePortal
       id="car-filter"
       options={cars}
-      getOptionLabel={(option) => option.label}
+      getOptionLabel={(option) => option} 
       onChange={(event, value) => onSelectCar(value)}
       renderInput={(params) => <TextField {...params} label="Buscar" />}
       sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', gap: '8px', maxWidth: '100vw' }}
