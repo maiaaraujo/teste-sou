@@ -2,15 +2,13 @@ import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 
 export default function Navbar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" sx={{ bgcolor: '#2a9d8f' }}>
         <Toolbar>
           <IconButton
             size="large"
@@ -19,7 +17,7 @@ export default function Navbar() {
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            <MenuIcon />
+            SouCar
           </IconButton>
           <Button color="inherit">Ofertas</Button>
           <Button color="inherit">Administração</Button>
