@@ -73,7 +73,7 @@ const TabelaAdmin = () => {
               <StyledTableCell align="right">{carro.dataCadastro}</StyledTableCell>
               <StyledTableCell align="right">
                 <Button variant="contained" color="primary" onClick={() => handleEditar(carro.id)}>Editar</Button>
-                <Button variant="contained" color="secondary" onClick={() => handleDeletar(carro.id)}>Deletar</Button>
+                <Button variant="contained" color="secondary" sx={{ marginLeft: '8px' }} onClick={() => handleDeletar(carro.id)}>Deletar</Button>
               </StyledTableCell>
             </StyledTableRow>
           ))}
