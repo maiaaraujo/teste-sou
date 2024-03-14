@@ -10,7 +10,7 @@
         "quilometragem": 20000,
         "placa": "ABC1234",
         "cidade": "São Paulo",
-        "fotos": ["foto1.jpg", "foto2.jpg"],
+        "fotos": ["toyota1.jpg", "toyota2.jpg"],
         "dataCadastro": "2024-03-13",
         "visualizacoes": 0
       },
@@ -24,7 +24,7 @@
         "quilometragem": 30000,
         "placa": "DEF5678",
         "cidade": "Rio de Janeiro",
-        "fotos": ["foto3.jpg", "foto4.jpg"],
+        "fotos": ["honda1.jpg", "honda2.jpg"],
         "dataCadastro": "2024-03-14",
         "visualizacoes": 0
       }

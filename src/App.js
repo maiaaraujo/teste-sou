@@ -1,17 +1,19 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
 import OfertasPage from './pages/OfertasPage/OfertasPage';
-import HomePage from './pages/HomePage/HomePage';
 import AdminPage from './pages/AdminPage/AdminPage';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
     <Router>
-      <Routes>
+    <div>
+    <Navbar/>
+    <Routes>
         <Route path="/admin" element={<AdminPage />} /> 
         <Route path="/oferta" element={<OfertasPage />} /> 
-        <Route path="/" element={<HomePage />} /> 
    </Routes>
+   </div>
     </Router>
   );
 }

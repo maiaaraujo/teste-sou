@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   return (
@@ -19,9 +20,8 @@ export default function Navbar() {
           >
             SouCar
           </IconButton>
-          <Button color="inherit">Ofertas</Button>
-          <Button color="inherit">Administração</Button>
-
+          <Button color="inherit" component={Link} to="/oferta">Ofertas</Button> 
+          <Button color="inherit" component={Link} to="/admin">Administrativo</Button>
         </Toolbar>
       </AppBar>
     </Box>
