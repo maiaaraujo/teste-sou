@@ -102,7 +102,7 @@ const ModalForm = ({ adicionarOferta }) => {
                 <TextField id="dataCadastro" label="Data de Cadastro" variant="outlined" name="dataCadastro" value={novaOferta.dataCadastro} onChange={handleChange} fullWidth/>
               </Grid>
               <Grid item xs={12}>
-                <Button variant="contained" type="submit" fullWidth>Adicionar Oferta</Button>
+                <Button variant="contained" type="submit"  sx={{ backgroundColor: '#fb8500' }} fullWidth>Adicionar Oferta</Button>
               </Grid>
             </Grid>
           </form>
