@@ -40,7 +40,7 @@ const AdminForm = ({ adicionarOferta }) => {
 
   return (
     <div>
-      <Button variant="contained" onClick={handleSubmit}>Adicionar Nova Oferta</Button> {/* Transforme o texto em um botão */}
+      <Button variant="contained" onClick={handleSubmit}>Adicionar Nova Oferta</Button> 
     </div>
   );
 };

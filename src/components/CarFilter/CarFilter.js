@@ -3,14 +3,13 @@ import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 
 const CarFilter = ({ cars, onSelectCar, onFilter }) => {
-  const carOptions = cars.map(car => `${car.marca} ${car.modelo}`); // Cria uma lista de opções legíveis ao usuário
-
+  const carOptions = cars.map(car => `${car.marca} ${car.modelo}`); 
   const handleFilterChange = (event, value) => {
     if (value) {
       const selectedCar = cars.find(car => `${car.marca} ${car.modelo}` === value);
-      onSelectCar(selectedCar); // Seleciona o carro
+      onSelectCar(selectedCar); 
     } else {
-      onFilter(cars); // Sem filtro, exibe todos os carros
+      onFilter(cars); 
     }
   };
 
