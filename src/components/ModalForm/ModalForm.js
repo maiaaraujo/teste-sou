@@ -68,7 +68,7 @@ const ModalForm = ({ adicionarOferta }) => {
         aria-describedby="modal-modal-description"
       >
         <div style={style}>
-          <h2>Adicionar Nova Oferta</h2>
+          <h2 style={{ fontFamily: 'Arial, sans-serif', color: '#264653' }}>Adicionar Nova Oferta</h2>
           <form onSubmit={handleSubmit}>
             <Grid container spacing={2}>
               <Grid item xs={6}>

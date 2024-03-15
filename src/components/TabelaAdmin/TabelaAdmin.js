@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import carrosData from '../../data/carros.json'; 
 import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
@@ -30,14 +30,27 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 
 const TabelaAdmin = () => {
+  const [carros, setCarros] = useState([]);
+
+  useEffect(() => {
+   
+    setCarros(carrosData.carros);
+  }, []);
+
   const handleEditar = (id) => {
-    // Lógica para editar o carro com o ID fornecido
+   
     console.log('Editar carro com ID:', id);
   };
 
   const handleDeletar = (id) => {
-    // Lógica para deletar o carro com o ID fornecido
+
     console.log('Deletar carro com ID:', id);
+    const novosCarros = carros.filter(carro => carro.id !== id);
+    setCarros(novosCarros);
+    
+   
+    const newData = { carros: novosCarros };
+    localStorage.setItem('carrosData', JSON.stringify(newData));
   };
 
   return (
@@ -58,7 +71,7 @@ const TabelaAdmin = () => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {carrosData.carros.map(carro => (
+          {carros.map(carro => (
             <StyledTableRow key={carro.id}>
               <StyledTableCell component="th" scope="row">
                 {carro.marca}

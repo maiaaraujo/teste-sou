@@ -9,8 +9,7 @@ const BasicCard = ({ carro }) => {
   return (
     <Card sx={{ minWidth: 200, bgcolor: '#e9c46a', marginBottom: 2 }}>
       <CardContent>
-        {/* Use o caminho completo para as imagens */}
-        <img src={`./img/${carro.fotos[0]}`} alt={`${carro.fotos}`} style={{ width: '100%', marginBottom: 10 }} />
+      <img src={`${process.env.REACT_APP_IMAGE_PATH}/toyota1.jpg`} alt="Toyota" />
 
         <Typography variant="h5" component="div">
           {carro.marca} {carro.modelo}

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import TabelaAdmin from '../../components/TabelaAdmin/TabelaAdmin';
 import CarFilter from '../../components/CarFilter/CarFilter';
 import ModalForm from '../../components/ModalForm/ModalForm';
-import carrosData from '../../data/carros.json'; // Importe os dados dos carros
+import carrosData from '../../data/carros.json'; 
 
 const AdminPage = () => {
   const [selectedCar, setSelectedCar] = useState(null);
@@ -27,7 +27,7 @@ const AdminPage = () => {
       <div style={{ marginTop: '20px', marginBottom: '20px' }}>
         <TabelaAdmin carros={filteredCars} />
       </div>
-      <ModalForm />
+      <ModalForm/>
     </div>
   );
 };
