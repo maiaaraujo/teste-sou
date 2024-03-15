@@ -10,7 +10,7 @@
         "quilometragem": 20000,
         "placa": "ABC1234",
         "cidade": "São Paulo",
-        "fotos": ["toyota1.jpg", "toyota2.jpg"],
+        "fotos": "",
         "dataCadastro": "2024-03-13",
         "visualizacoes": 0
       },
@@ -24,7 +24,7 @@
         "quilometragem": 30000,
         "placa": "DEF5678",
         "cidade": "Rio de Janeiro",
-        "fotos": ["honda1.jpg", "honda2.jpg"],
+        "fotos": "honda1.jpg",
         "dataCadastro": "2024-03-14",
         "visualizacoes": 0
       },
@@ -38,7 +38,7 @@
         "quilometragem": 25000,
         "placa": "GHI9012",
         "cidade": "Curitiba",
-        "fotos": ["gol1.jpg", "gol2.jpg"],
+        "fotos": "honda1.jpg",
         "dataCadastro": "2024-03-15",
         "visualizacoes": 0
       },
@@ -52,7 +52,7 @@
         "quilometragem": 15000,
         "placa": "JKL3456",
         "cidade": "Belo Horizonte",
-        "fotos": ["onix1.jpg", "onix2.jpg"],
+        "fotos": "honda1.jpg",
         "dataCadastro": "2024-03-16",
         "visualizacoes": 0
       }
